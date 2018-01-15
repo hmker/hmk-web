@@ -7,7 +7,7 @@
                 <div class="logo pull-left">LOGO.INFO</div>
                 <!-- 导航 -->
                 <div class="box-nav pull-left clearfix">
-                    <router-link to="/" class="nav pull-left">首页</router-link>
+                    <router-link to="/" :class="this.view == index ? 'nav pull-left active':'nav pull-left'">首页</router-link>
                     <router-link to="/project" class="nav pull-left">项目</router-link>
                     <router-link to="/list" class="nav pull-left">分类</router-link>
                 </div>
@@ -41,8 +41,7 @@
     export default {
         props: {
             prop: {
-                now: String,
-                require: true
+                view: String
             },
         },
         data() {
@@ -103,15 +102,26 @@
 .box-pc .box-nav{
     line-height: 60px;
 }
-.box-pc .box-nav a{
+.box-pc .box-nav .nav{
     height: 100%;
     color: #fff;
     text-decoration: none;
     padding: 0 20px;
+    position: relative;
 }
-.box-pc .box-nav a:hover{
+.box-pc .box-nav .nav:hover{
     background-color: #222;
     color: #007AFF;
+}
+.box-pc .box-nav .nav.active::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #007AFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .box-pc .box-search{

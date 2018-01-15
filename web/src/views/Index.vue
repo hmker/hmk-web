@@ -1,6 +1,6 @@
 <template>
     <div class="wrap">
-        <Navbar />
+        <Navbar view="index"/>
         2333
     </div>
 </template>
