@@ -9,33 +9,33 @@
                 <!-- Todo -->
             </div>
             <!-- 项目 -->
-            <div class="box-title">
-                <div class="title">
-                    项目
-                </div>
-                <div class="line"></div>
-            </div>
+            <Title value="项目" />
             <div class="content clearfix">
-                <ProjectCard class="project-card pull-left" :item="item" v-for="(item,index) in projectData" :key="index" />
+                <ProjectCard class="card pull-left" :item="item" v-for="(item,index) in projectData" :key="index" />
             </div>
             <!-- 分类 -->
-            <div class="box-title">
-                <div class="title">
-                    分类
-                </div>
-                <div class="line"></div>
+            <Title value="分类" />
+            <div class="content clearfix">
+                <ListCard class="card pull-left" :item="item" v-for="(item,index) in projectData" :key="index" />
             </div>
+            <Footer />
         </div>
     </div>
 </template>
 
 <script>
     import Navbar from '@/components/Navbar'
+    import Footer from '@/components/Footer'
+    import Title from '@/components/Title'
     import ProjectCard from '@/components/ProjectCard'
+    import ListCard from '@/components/ListCard'
     export default {
         components: {
             Navbar,
-            ProjectCard
+            Footer,
+            Title,
+            ProjectCard,
+            ListCard
         },
         data() {
             return {
@@ -100,6 +100,7 @@
         height: 100%;
         overflow-x: hidden;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
     .box-banner{
         width: 100%;
@@ -111,34 +112,17 @@
         background-repeat: no-repeat;
         background-position: center; */
     }
-    .box-title{
-        width: 100%;
-        text-align: center;
-        margin-top: 40px;
-    }
-    .box-title .title {
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 1;
-        color: #fff;
-    }
-    .box-title .line{
-        width: 40px;
-        height: 5px;
-        background-color: #222;
-        margin: 20px auto;
-    }
     .content{
         width: 90%;
         max-width: 1400px;
         margin: 0 auto;
     }
-    .project-card{
+    .card{
         width: 32%;
         margin-right: 2%;
         margin-bottom: 40px;
     }
-    .project-card:nth-child(3n){
+    .card:nth-child(3n){
        margin-right: 0; 
     }
 </style>

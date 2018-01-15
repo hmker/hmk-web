@@ -9,7 +9,7 @@
         </div>
         <!-- 文字 -->
         <div class="box-text">
-            <div class="title">标题标题标题标题标题标题标题</div>
+            <div class="title">超级无敌的超学院级永动机</div>
             <div class="author clearfix">
                 <div class="avatar pull-left" :style="{backgroundImage:`url(${avatarimg})`}"></div>
                 <div class="nick pull-left">e未酱</div>
@@ -104,7 +104,7 @@
 }
 
 .wrap-projectcard:hover .box-image .img{
-    transform: scale(1.2,1.2)
+    transform: scale(1.15,1.15)
 }
 .wrap-projectcard:hover .box-image .intro{
     opacity: 1;
@@ -138,6 +138,10 @@
     line-height: 24px;
     height: 24px;
     overflow: hidden;
+}
+
+.wrap-projectcard:hover .box-text .title{
+    color: #007AFF;
 }
     
 </style>
