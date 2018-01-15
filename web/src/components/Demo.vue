@@ -11,10 +11,8 @@
             Navbar
         },
         props: {
-            prop: {
-                type: [Number, String],
-                require: true
-            },
+            type: [Number, String],
+            require: true
         },
         data() {
             return {

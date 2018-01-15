@@ -1,7 +1,25 @@
 <template>
-    <div class="wrap">
+    <div class="wrap-index">
+        <!-- 导航 -->
         <Navbar view="index"/>
-        2333
+        <div class="scroll-view">
+            <div class="banner">
+                <!-- Todo -->
+            </div>
+            <!-- 项目区域 -->
+            <div class="box-title">
+                <div class="title">
+                    项目
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="box-title">
+                <div class="title">
+                    分类
+                </div>
+                <div class="line"></div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -10,12 +28,6 @@
     export default {
         components: {
             Navbar
-        },
-        props: {
-            prop: {
-                type: [Number, String],
-                require: true
-            },
         },
         data() {
             return {
@@ -48,5 +60,33 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    
+    .wrap-index{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        padding-top: 60px;
+    }
+    .scroll-view{
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .box-title{
+        width: 100%;
+        text-align: center;
+    }
+    .box-title .title {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 1;
+        color: #fff;
+    }
+    .box-title .line{
+        width: 100px;
+        height: 5px;
+        background-color: #222;
+        margin: 20px auto;
+    }
+
 </style>
