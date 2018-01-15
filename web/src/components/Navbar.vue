@@ -3,11 +3,30 @@
         <div class="box-pc clearfix">
             <div class="pc-wrap">
             <!-- 电脑版 -->
+                <!-- Logo -->
                 <div class="logo pull-left">LOGO.INFO</div>
-                <div class="box-nav clearfix">
+                <!-- 导航 -->
+                <div class="box-nav pull-left clearfix">
                     <router-link to="/" class="nav pull-left">首页</router-link>
                     <router-link to="/project" class="nav pull-left">项目</router-link>
                     <router-link to="/list" class="nav pull-left">分类</router-link>
+                </div>
+                <!-- 搜索 -->
+                <div class="box-search pull-left clearfix">
+                    <div class="box-input pull-left">
+                        <input type="text">
+                        <!-- <span>X</span> Todo 清除输入 -->
+                    </div>
+                    <button class="pull-left">搜索</button>
+                    <!-- Todo 文字换成图标 -->
+                    <!-- Todo 鼠标移入，焦点自动聚焦到input上 -->
+                </div>
+                <!-- 用户信息 -->
+                <div class="box-user pull-right">
+                    <div class="user">
+                        <!-- Todo -->
+                    </div>
+                    <router-link to="/login" class="no-user">登录/注册</router-link>
                 </div>
             </div>
         </div>
@@ -22,7 +41,7 @@
     export default {
         props: {
             prop: {
-                type: [Number, String],
+                now: String,
                 require: true
             },
         },
@@ -91,6 +110,53 @@
     padding: 0 20px;
 }
 .box-pc .box-nav a:hover{
+    background-color: #222;
+    color: #007AFF;
+}
+
+.box-pc .box-search{
+    height: 60px;
+    margin-left:20px;
+}
+.box-pc .box-search .box-input{
+    position: relative;
+}
+.box-pc .box-search .box-input input{
+    -webkit-appearance: none;
+    width: 100px;
+    height: 60px;
+    border:none;
+    background-color: #222;
+    padding:0 10px;
+    color: #fff;
+}
+.box-pc .box-search:hover .box-input input{
+    width: 200px;
+    background-color: #eee;
+    color: #000;
+}
+.box-pc .box-search button {
+    width: 60px;
+    height: 100%;
+    background-color: #222;
+    border:none;
+    color: #fff;
+    cursor: pointer;
+}
+.box-pc .box-search:hover button{
+    background-color: #007AFF;
+}
+.box-pc .box-user{
+    height: 60px;
+    line-height: 60px;
+}
+.box-pc .box-user .no-user{
+    color: #007AFF;
+    text-decoration: none;
+    display: block;
+    padding: 0 10px;
+}
+.box-pc .box-user .no-user:hover{
     background-color: #222;
 }
     
