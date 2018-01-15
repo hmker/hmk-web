@@ -7,12 +7,13 @@
                 <div class="logo pull-left">LOGO.INFO</div>
                 <!-- 导航 -->
                 <div class="box-nav pull-left clearfix">
-                    <router-link to="/" :class="this.view == index ? 'nav pull-left active':'nav pull-left'">首页</router-link>
-                    <router-link to="/project" class="nav pull-left">项目</router-link>
-                    <router-link to="/list" class="nav pull-left">分类</router-link>
+                    <router-link to="/" :class="view == 'index' ? 'nav pull-left active':'nav pull-left'">首页</router-link>
+                    <router-link to="/project" :class="view == 'project' ? 'nav pull-left active':'nav pull-left'">项目</router-link>
+                    <router-link to="/list" :class="view == 'list' ? 'nav pull-left active':'nav pull-left'">分类</router-link>
+                    <div v-if="view == 'search'" :class="view == 'search' ? 'nav pull-left active':'nav pull-left'">搜索</div>
                 </div>
                 <!-- 搜索 -->
-                <div class="box-search pull-left clearfix">
+                <div class="box-search pull-left clearfix" v-if="view != 'search'">
                     <div class="box-input pull-left">
                         <input type="text">
                         <!-- <span>X</span> Todo 清除输入 -->
@@ -40,9 +41,7 @@
 <script>
     export default {
         props: {
-            prop: {
-                view: String
-            },
+            view: String //index project list search detail
         },
         data() {
             return {
@@ -52,6 +51,7 @@
         created() {},
         mounted() {
             // this.init(this.$route.query);
+            console.log(this.view)
         },
         watch: {},
         methods: {
@@ -111,6 +111,9 @@
 }
 .box-pc .box-nav .nav:hover{
     background-color: #222;
+    color: #007AFF;
+}
+.box-pc .box-nav .nav.active{
     color: #007AFF;
 }
 .box-pc .box-nav .nav.active::after{
