@@ -138,7 +138,7 @@
 }
 .box-pc .box-search .box-input input{
     -webkit-appearance: none;
-    width: 100px;
+    width: 150px;
     height: 60px;
     border:none;
     background-color: #222;

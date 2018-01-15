@@ -1,17 +1,19 @@
 <template>
     <a class="wrap-projectcard" @click="goDetail('2')">
+        <!-- 图片 -->
         <div class="box-image">
             <div class="img" :style="{backgroundImage:`url(${bgimg})`}"></div>
             <div class="intro">
                 早就耳闻珠海的美丽，六月上旬，夏冰利用出差的最后一个黄昏打的去了心仪已久的花园城市。出租车刚行至那条著名的情侣路，夏冰便迫不及待地示意司机停车。四周，灯火阑珊，踩着软软的细沙，闻着海风的气息，看着涟漪的波浪，夏冰好想不顾一切地扑进海的怀抱。不远处，一对对情侣，或甜蜜相对，或深情相拥，夏冰的心隐隐疼了一下，她刻意把视线移开，低头专注地找寻贝壳。不久，突然身后传来了一阵熟悉的咳嗽声，夏冰情不自禁地回眸。
             </div>
         </div>
+        <!-- 文字 -->
         <div class="box-text">
             <div class="title">标题标题标题标题标题标题标题</div>
-            <a class="author clearfix">
+            <div class="author clearfix">
                 <div class="avatar pull-left" :style="{backgroundImage:`url(${avatarimg})`}"></div>
                 <div class="nick pull-left">e未酱</div>
-            </a>
+            </div>
         </div>
     </a>
 </template>
@@ -55,9 +57,9 @@
             // }
             goDetail:function(value){
                 this.$router.push({
-                    path: '/',
+                    path: '/detail',
                     query: {
-                        id:value
+                        'id':value
                     }
                 });
             }
@@ -121,8 +123,6 @@
     width: 100%;
     margin-top: 4px;
     position: relative;
-    display: block;
-    text-decoration: none;
 }
 .box-text .author .avatar{
     width: 24px;
