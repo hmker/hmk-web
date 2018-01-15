@@ -7,6 +7,7 @@ import List from '@/views/List'
 import Login from '@/views/Login'
 import Project from '@/views/Project'
 import Search from '@/views/Search'
+import Publish from '@/views/Publish'
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ export default new Router({
       path: '/search',
       name: 'Search',
       component: Search
+    },
+    {
+      path: '/publish',
+      name: 'Publish',
+      component: Publish
     }
   ]
 })

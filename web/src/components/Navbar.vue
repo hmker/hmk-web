@@ -10,6 +10,7 @@
                     <router-link to="/" :class="view == 'index' ? 'nav pull-left active':'nav pull-left'">首页</router-link>
                     <router-link to="/project" :class="view == 'project' ? 'nav pull-left active':'nav pull-left'">项目</router-link>
                     <router-link to="/list" :class="view == 'list' ? 'nav pull-left active':'nav pull-left'">分类</router-link>
+                    <router-link to="/publish" :class="view == 'publish' ? 'nav pull-left active':'nav pull-left'">发布</router-link>
                     <div v-if="view == 'search'" :class="view == 'search' ? 'nav pull-left active':'nav pull-left'">搜索</div>
                 </div>
                 <!-- 搜索 -->
@@ -29,6 +30,7 @@
                         <!-- Todo -->
                     </div>
                     <router-link to="/login" class="no-user">登录/注册</router-link>
+                    <!-- Todo -->
                 </div>
             </div>
         </div>

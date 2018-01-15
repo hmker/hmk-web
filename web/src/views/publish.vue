@@ -1,6 +1,6 @@
 <template>
     <div class="wrap-detail">
-        详情页面需要想一下怎么写
+        发布需要讨论一下
     </div>
 </template>
 

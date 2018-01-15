@@ -1,7 +1,7 @@
 <template>
     <div class="wrap-login">
         <!-- 导航 -->
-        <Navbar view="project"/>
+        <Navbar view="login"/>
         <!-- Scroll View -->
         <div class="scroll-view">
             <!-- 项目 -->

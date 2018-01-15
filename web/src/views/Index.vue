@@ -9,12 +9,12 @@
                 <!-- Todo -->
             </div>
             <!-- 项目 -->
-            <Title value="项目" />
+            <Title value="推荐项目" />
             <div class="content clearfix">
                 <ProjectCard class="card pull-left" :item="item" v-for="(item,index) in projectData" :key="index" />
             </div>
             <!-- 分类 -->
-            <Title value="分类" />
+            <Title value="热门分类" />
             <div class="content clearfix">
                 <ListCard class="card pull-left" :item="item" v-for="(item,index) in projectData" :key="index" />
             </div>
