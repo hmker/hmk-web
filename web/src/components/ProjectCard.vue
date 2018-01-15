@@ -128,7 +128,6 @@
     width: 24px;
     height: 24px;
     border-radius: 12px;
-    overflow: hidden;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
