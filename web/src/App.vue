@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
-    <router-view/>
+    <router-view class="container"/>
     <notifications group="foo" />
   </div>
 </template>

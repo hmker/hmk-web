@@ -1,11 +1,15 @@
 <template>
-    <div>
+    <div class="wrap">
+        2333
     </div>
 </template>
 
 <script>
+    import Navbar from '@/components/Navbar'
     export default {
-        name: "demo",
+        components: {
+            Navbar
+        },
         props: {
             prop: {
                 type: [Number, String],
@@ -19,24 +23,24 @@
         },
         created() {},
         mounted() {
-            this.init(this.$route.query);
+            // this.init(this.$route.query);
         },
         watch: {},
         methods: {
-            post: function() {
-                var self = this;
-                var URL = '/api/v1/auth/';
-                this.$http.post(URL).then(function(response) {
-                    var info = response.data.response;
-                    if (response.data.code == 1000) {
-                        console.log(info)
-                    } else {
-                        self.$notify(response.data.msg);
-                    }
-                }).catch(function(error) {
-                    console.log(error);
-                });
-            }
+            // post: function() {
+            //     var self = this;
+            //     var URL = '/api/v1/auth/';
+            //     this.$http.post(URL).then(function(response) {
+            //         var info = response.data.response;
+            //         if (response.data.code == 1000) {
+            //             console.log(info)
+            //         } else {
+            //             self.$notify(response.data.msg);
+            //         }
+            //     }).catch(function(error) {
+            //         console.log(error);
+            //     });
+            // }
         }
     }
 </script>
