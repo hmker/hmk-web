@@ -3,6 +3,7 @@
     <!-- <img src="./assets/logo.png"> -->
     <router-view class="container"/>
     <notifications group="foo" />
+    <!-- Todo 增加加载条 -->
   </div>
 </template>
 

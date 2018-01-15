@@ -1,6 +1,11 @@
 <template>
     <div class="wrap-detail">
-        详情页面需要想一下怎么写
+        <!-- 导航 -->
+        <Navbar view="detail"/>
+        <!-- Scroll View -->
+        <div class="scroll-view">
+            详情需要设计一下
+        </div>
     </div>
 </template>
 
@@ -46,6 +51,10 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .wrap-detail{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        padding-top: 60px;
         color: #fff;
     }
 </style>

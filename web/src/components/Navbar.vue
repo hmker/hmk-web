@@ -11,6 +11,7 @@
                     <router-link to="/project" :class="view == 'project' ? 'nav pull-left active':'nav pull-left'">项目</router-link>
                     <router-link to="/list" :class="view == 'list' ? 'nav pull-left active':'nav pull-left'">分类</router-link>
                     <router-link to="/publish" :class="view == 'publish' ? 'nav pull-left active':'nav pull-left'">发布</router-link>
+                    <div v-if="view == 'detail'" :class="view == 'detail' ? 'nav pull-left active':'nav pull-left'">详情</div>
                     <div v-if="view == 'search'" :class="view == 'search' ? 'nav pull-left active':'nav pull-left'">搜索</div>
                 </div>
                 <!-- 搜索 -->
@@ -19,7 +20,7 @@
                         <input type="text" placeholder="搜索">
                         <!-- <span>X</span> Todo 清除输入 -->
                     </div>
-                    <button class="pull-left">
+                    <button class="pull-left" @click="search('233')">
                         <img src="http://hmk-temp.oss-cn-hangzhou.aliyuncs.com/img/icon-search.png" alt="">
                     </button>
                     <!-- Todo 鼠标移入，焦点自动聚焦到input上 -->
@@ -71,6 +72,15 @@
             //         console.log(error);
             //     });
             // }
+            search:function(value){
+                this.$router.push({
+                    path: '/search',
+                    query: {
+                        'search':value
+                    }
+                });
+
+            }
         }
     }
 </script>

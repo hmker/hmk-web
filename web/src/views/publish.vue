@@ -1,6 +1,11 @@
 <template>
-    <div class="wrap-detail">
-        发布需要讨论一下
+    <div class="wrap-publish">
+        <!-- 导航 -->
+        <Navbar view="publish"/>
+        <!-- Scroll View -->
+        <div class="scroll-view">
+            发布需要讨论一下
+        </div>
     </div>
 </template>
 
@@ -45,7 +50,11 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .wrap-detail{
+    .wrap-publish{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        padding-top: 60px;
         color: #fff;
     }
 </style>
