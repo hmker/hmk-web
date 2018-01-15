@@ -1,6 +1,6 @@
 <template>
     <div class="wrap-footer">
-        ©{{thisYear}} HMK 京ICP证030173号
+        © {{thisYear}} HMK 京ICP证030173号
     </div>
 </template>
 

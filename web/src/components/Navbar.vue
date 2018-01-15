@@ -15,11 +15,12 @@
                 <!-- 搜索 -->
                 <div class="box-search pull-left clearfix" v-if="view != 'search'">
                     <div class="box-input pull-left">
-                        <input type="text">
+                        <input type="text" placeholder="搜索">
                         <!-- <span>X</span> Todo 清除输入 -->
                     </div>
-                    <button class="pull-left">搜索</button>
-                    <!-- Todo 文字换成图标 -->
+                    <button class="pull-left">
+                        <img src="http://hmk-temp.oss-cn-hangzhou.aliyuncs.com/img/icon-search.png" alt="">
+                    </button>
                     <!-- Todo 鼠标移入，焦点自动聚焦到input上 -->
                 </div>
                 <!-- 用户信息 -->
@@ -131,32 +132,43 @@
 
 .box-pc .box-search{
     height: 60px;
-    margin-left:20px;
 }
 .box-pc .box-search .box-input{
     position: relative;
 }
 .box-pc .box-search .box-input input{
     -webkit-appearance: none;
-    width: 150px;
+    width: 0;
     height: 60px;
     border:none;
-    background-color: #222;
-    padding:0 10px;
+    background-color: #000;
+    overflow: hidden;
     color: #fff;
+}
+.box-pc .box-search:hover{
+    margin-left: 20px;
 }
 .box-pc .box-search:hover .box-input input{
     width: 200px;
     background-color: #eee;
+    padding:0 10px;
     color: #000;
 }
 .box-pc .box-search button {
     width: 60px;
     height: 100%;
-    background-color: #222;
+    padding: 0;
+    margin: 0;
+    background-color: #000;
     border:none;
     color: #fff;
     cursor: pointer;
+}
+.box-pc .box-search button img{
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin:0 auto;
 }
 .box-pc .box-search:hover button{
     background-color: #007AFF;

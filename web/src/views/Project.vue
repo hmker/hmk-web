@@ -127,23 +127,6 @@
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
-    .box-title{
-        width: 100%;
-        text-align: center;
-        margin-top: 40px;
-    }
-    .box-title .title {
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 1;
-        color: #fff;
-    }
-    .box-title .line{
-        width: 40px;
-        height: 5px;
-        background-color: #222;
-        margin: 20px auto;
-    }
     .content{
         width: 90%;
         max-width: 1400px;
