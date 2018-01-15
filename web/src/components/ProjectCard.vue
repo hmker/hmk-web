@@ -1,5 +1,5 @@
 <template>
-    <a class="wrap-projectcard">
+    <a class="wrap-projectcard" @click="goDetail('2')">
         <div class="box-image">
             <div class="img" :style="{backgroundImage:`url(${bgimg})`}"></div>
             <div class="intro">
@@ -53,6 +53,14 @@
             //         console.log(error);
             //     });
             // }
+            goDetail:function(value){
+                this.$router.push({
+                    path: '/',
+                    query: {
+                        id:value
+                    }
+                });
+            }
         }
     }
 </script>
