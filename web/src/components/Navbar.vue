@@ -51,7 +51,6 @@
         created() {},
         mounted() {
             // this.init(this.$route.query);
-            console.log(this.view)
         },
         watch: {},
         methods: {

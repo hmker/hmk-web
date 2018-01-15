@@ -2,17 +2,23 @@
     <div class="wrap-index">
         <!-- 导航 -->
         <Navbar view="index"/>
+        <!-- Scroll View -->
         <div class="scroll-view">
-            <div class="banner">
+            <!-- Banner -->
+            <div class="box-banner">
                 <!-- Todo -->
             </div>
-            <!-- 项目区域 -->
+            <!-- 项目 -->
             <div class="box-title">
                 <div class="title">
                     项目
                 </div>
                 <div class="line"></div>
             </div>
+            <div class="content clearfix">
+                <ProjectCard class="project-card pull-left" :item="item" v-for="(item,index) in projectData" :key="index" />
+            </div>
+            <!-- 分类 -->
             <div class="box-title">
                 <div class="title">
                     分类
@@ -25,13 +31,36 @@
 
 <script>
     import Navbar from '@/components/Navbar'
+    import ProjectCard from '@/components/ProjectCard'
     export default {
         components: {
-            Navbar
+            Navbar,
+            ProjectCard
         },
         data() {
             return {
-                data: "",
+                projectData: [
+                    {
+                        "id":1,
+                        "title":"哈哈哈1"
+                    },
+                    {
+                        "id":1,
+                        "title":"哈哈哈2"
+                    },
+                    {
+                        "id":1,
+                        "title":"哈哈哈3"
+                    },
+                    {
+                        "id":1,
+                        "title":"哈哈哈4"
+                    },
+                    {
+                        "id":1,
+                        "title":"哈哈哈5"
+                    }
+                ],
             }
         },
         created() {},
@@ -72,9 +101,20 @@
         overflow-x: hidden;
         overflow-y: auto;
     }
+    .box-banner{
+        width: 100%;
+        height: 500px;
+        background-color: #444;
+        /* temp */
+        /* background-image: url('http://hmk-temp.oss-cn-hangzhou.aliyuncs.com/img/banner-temp.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; */
+    }
     .box-title{
         width: 100%;
         text-align: center;
+        margin-top: 40px;
     }
     .box-title .title {
         font-weight: bold;
@@ -83,10 +123,22 @@
         color: #fff;
     }
     .box-title .line{
-        width: 100px;
+        width: 40px;
         height: 5px;
         background-color: #222;
         margin: 20px auto;
     }
-
+    .content{
+        width: 90%;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    .project-card{
+        width: 32%;
+        margin-right: 2%;
+        margin-bottom: 40px;
+    }
+    .project-card:nth-child(3n){
+       margin-right: 0; 
+    }
 </style>
