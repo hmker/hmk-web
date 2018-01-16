@@ -104,7 +104,7 @@
 .box-pc .pc-wrap{
     width: 90%;
     height: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
