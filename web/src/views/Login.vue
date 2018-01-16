@@ -185,6 +185,6 @@
         cursor: pointer;
     }
     .login button:hover{
-        background-color: #007AFF;
+        background-color: #259FFF;
     }
 </style>
