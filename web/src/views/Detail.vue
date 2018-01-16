@@ -45,21 +45,12 @@
                 </div>
             </div>
             <!-- 信息条 浮动 -->
-            <div class="box-quickbar box-quickbar-fixed clearfix" v-if="showfixQucikbar">
+            <div :class="showfixQucikbar ? 'box-quickbar box-quickbar-fixed show clearfix':'box-quickbar box-quickbar-fixed clearfix'">
                 <div class="wrap-quickbar">
+                    <!-- Todo 添加返回顶部 -->
                     <div class="left pull-left clearfix">
-                        <div class="info pull-left">
-                            <div class="value">34K</div>
-                            <div class="label">次浏览</div>
-                        </div>
-                        <div class="info pull-left">
-                            <div class="value">1200</div>
-                            <div class="label">点赞</div>
-                        </div>
-                        <div class="info pull-left">
-                            <div class="value">34</div>
-                            <div class="label">条讨论</div>
-                        </div>
+                        <div class="title">宇宙无敌永动机</div>
+                        <div class="intro">宇宙无敌永动机简介,宇宙无敌永动机简介,宇宙无敌永动机简介,宇宙无敌永动机简介。</div>
                     </div>
                     <div class="right pull-right clearfix">
                         <button class="detail-nav pull-right">讨论</button>
@@ -70,77 +61,50 @@
                     </div>
                 </div>
             </div>
+            <div class="box-detail"></div>
             <p>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
-                a <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
+                1 <br>
             </p>
         </div>
     </div>
@@ -354,5 +318,29 @@
         position: fixed;
         top:0;
         left: 0;
+        transform: translateY(-60px);
+    }
+    .box-quickbar-fixed.show{
+        transform: translateY(0);
+        
+    }
+    .box-quickbar-fixed .left{
+        width: 40%;
+        overflow: hidden;
+        padding:10px 0 0;
+        height: 60px;;
+    }
+    .box-quickbar-fixed .left .title{
+        font-size: 18px;
+    }
+    .box-quickbar-fixed .left .intro{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        word-break: keep-all;
+        white-space: nowrap;
+        margin-top: 4px;
+        font-size: 12px;
+        font-weight: lighter;
     }
 </style>
