@@ -4,7 +4,7 @@
         <Navbar view="login"/>
         <!-- Scroll View -->
         <div class="scroll-view">
-            <!-- 项目 -->
+            <!-- 东西 -->
             <Title value="登录/注册" />
             <form action="" class="login">
                 <input type="text" placeholder="邮箱">

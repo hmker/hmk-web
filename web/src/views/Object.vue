@@ -1,13 +1,13 @@
 <template>
-    <div class="wrap-index">
+    <div class="wrap-project">
         <!-- 导航 -->
-        <Navbar view="list"/>
+        <Navbar view="project"/>
         <!-- Scroll View -->
         <div class="scroll-view">
-            <!-- 分类 -->
-            <Title value="分类" />
+            <!-- 东西 -->
+            <Title value="东西" />
             <div class="content clearfix">
-                <ListCard class="card pull-left" :item="item" v-for="(item,index) in projectData" :key="index" />
+                <ProjectCard class="project-card pull-left" :item="item" v-for="(item,index) in projectData" :key="index" />
             </div>
             <Footer />
         </div>
@@ -18,13 +18,13 @@
     import Navbar from '@/components/Navbar'
     import Footer from '@/components/Footer'
     import Title from '@/components/Title'
-    import ListCard from '@/components/ListCard'
+    import ProjectCard from '@/components/ProjectCard'
     export default {
         components: {
             Navbar,
             Footer,
             Title,
-            ListCard
+            ProjectCard
         },
         data() {
             return {
@@ -44,6 +44,18 @@
                     {
                         "id":1,
                         "title":"哈哈哈4"
+                    },
+                    {
+                        "id":1,
+                        "title":"哈哈哈5"
+                    },
+                    {
+                        "id":1,
+                        "title":"哈哈哈5"
+                    },
+                    {
+                        "id":1,
+                        "title":"哈哈哈5"
                     },
                     {
                         "id":1,
@@ -102,7 +114,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .wrap-index{
+    .wrap-project{
         width: 100%;
         height: 100%;
         overflow: hidden;
@@ -115,27 +127,17 @@
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
-    .box-banner{
-        width: 100%;
-        height: 500px;
-        background-color: #444;
-        /* temp */
-        /* background-image: url('http://hmk-temp.oss-cn-hangzhou.aliyuncs.com/img/banner-temp.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center; */
-    }
     .content{
         width: 90%;
         max-width: 1200px;
         margin: 0 auto;
     }
-    .card{
+    .project-card{
         width: 32%;
         margin-right: 2%;
         margin-bottom: 40px;
     }
-    .card:nth-child(3n){
+    .project-card:nth-child(3n){
        margin-right: 0; 
     }
 </style>

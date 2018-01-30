@@ -3,9 +3,9 @@ import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
 import Index from '@/views/Index'
 import Detail from '@/views/Detail'
-import List from '@/views/List'
+import Box from '@/views/Box'
 import Login from '@/views/Login'
-import Project from '@/views/Project'
+import Object from '@/views/Object'
 import Search from '@/views/Search'
 import Publish from '@/views/Publish'
 
@@ -25,9 +25,9 @@ export default new Router({
       component: Detail
     },
     {
-      path: '/list',
-      name: 'List',
-      component: List
+      path: '/box',
+      name: 'Box',
+      component: Box
     },
     {
       path: '/login',
@@ -35,9 +35,9 @@ export default new Router({
       component: Login
     },
     {
-      path: '/project',
-      name: 'Project',
-      component: Project
+      path: '/object',
+      name: 'Object',
+      component: Object
     },
     {
       path: '/search',

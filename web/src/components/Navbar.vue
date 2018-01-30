@@ -8,8 +8,8 @@
                 <!-- 导航 -->
                 <div class="box-nav pull-left clearfix">
                     <router-link to="/" :class="view == 'index' ? 'nav pull-left active':'nav pull-left'">首页</router-link>
-                    <router-link to="/project" :class="view == 'project' ? 'nav pull-left active':'nav pull-left'">项目</router-link>
-                    <router-link to="/list" :class="view == 'list' ? 'nav pull-left active':'nav pull-left'">分类</router-link>
+                    <router-link to="/object" :class="view == 'project' ? 'nav pull-left active':'nav pull-left'">东西</router-link>
+                    <router-link to="/box" :class="view == 'list' ? 'nav pull-left active':'nav pull-left'">盒子</router-link>
                     <router-link to="/publish" :class="view == 'publish' ? 'nav pull-left active':'nav pull-left'">发布</router-link>
                     <div v-if="view == 'detail'" :class="view == 'detail' ? 'nav pull-left active':'nav pull-left'">详情</div>
                     <div v-if="view == 'search'" :class="view == 'search' ? 'nav pull-left active':'nav pull-left'">搜索</div>

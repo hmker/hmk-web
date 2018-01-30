@@ -140,8 +140,8 @@
                     </div>
                 </div>
             </div>
-            <!-- 项目 -->
-            <Title value="相似项目" />
+            <!-- 东西 -->
+            <Title value="相似东西" />
             <div class="project-content clearfix">
                 <ProjectCard class="card pull-left" :item="item" v-for="(item,index) in projectData" :key="index" />
             </div>

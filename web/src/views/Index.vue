@@ -8,13 +8,13 @@
             <div class="box-banner">
                 <!-- Todo -->
             </div>
-            <!-- 项目 -->
-            <Title value="推荐项目" />
+            <!-- 东西 -->
+            <Title value="推荐东西" />
             <div class="content clearfix">
                 <ProjectCard class="card pull-left" :item="item" v-for="(item,index) in projectData" :key="index" />
             </div>
-            <!-- 分类 -->
-            <Title value="热门分类" />
+            <!-- 盒子 -->
+            <Title value="热门盒子" />
             <div class="content clearfix">
                 <ListCard class="card pull-left" :item="item" v-for="(item,index) in projectData" :key="index" />
             </div>
