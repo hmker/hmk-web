@@ -6,6 +6,33 @@
         <div class="scroll-view">
             <!-- 东西 -->
             <Title value="东西" />
+            <!-- 筛选 -->
+            <div class="hmk-filter clearfix">
+                <label for="" class="box-select pull-left">
+                    <div class="select-text">所属盒子</div>
+                    <select>
+                        <option value="">所属盒子</option>
+                    </select>
+                    <div class="arrow"></div>
+                </label>
+
+                <label for="" class="box-select pull-right">
+                    <div class="select-text">排序：喜欢人数</div>
+                    <select>
+                        <option value="">排序：喜欢人数</option>
+                    </select>
+                    <div class="arrow"></div>
+                </label>
+
+
+                <label for="" class="box-select pull-right">
+                    <div class="select-text">时间：近7周</div>
+                    <select>
+                        <option value="">时间：近7周</option>
+                    </select>
+                    <div class="arrow"></div>
+                </label>
+            </div>
             <div class="content clearfix">
                 <ProjectCard class="project-card pull-left" :item="item" v-for="(item,index) in projectData" :key="index" />
             </div>
@@ -114,30 +141,30 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .wrap-project{
+    .wrap-project {
         width: 100%;
         height: 100%;
         overflow: hidden;
         padding-top: 60px;
     }
-    .scroll-view{
+    .scroll-view {
         width: 100%;
         height: 100%;
         overflow-x: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
-    .content{
+    .content {
         width: 90%;
         max-width: 1200px;
         margin: 0 auto;
     }
-    .project-card{
+    .project-card {
         width: 32%;
         margin-right: 2%;
         margin-bottom: 40px;
     }
-    .project-card:nth-child(3n){
+    .project-card:nth-child(3n) {
        margin-right: 0; 
     }
 </style>

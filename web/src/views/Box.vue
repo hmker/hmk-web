@@ -6,6 +6,24 @@
         <div class="scroll-view">
             <!-- 盒子 -->
             <Title value="盒子" />
+            <!-- 筛选 -->
+            <div class="hmk-filter clearfix">
+                <label for="" class="box-select pull-left">
+                    <div class="select-text">选择tag</div>
+                    <select>
+                        <option value="">选择tag</option>
+                    </select>
+                    <div class="arrow"></div>
+                </label>
+
+                <label for="" class="box-select pull-right">
+                    <div class="select-text">排序：喜欢人数</div>
+                    <select>
+                        <option value="">排序：喜欢人数</option>
+                    </select>
+                    <div class="arrow"></div>
+                </label>
+            </div>
             <div class="content clearfix">
                 <ListCard class="card pull-left" :item="item" v-for="(item,index) in projectData" :key="index" />
             </div>
