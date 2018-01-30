@@ -5,15 +5,17 @@
         <!-- Scroll View -->
         <div class="scroll-view">
             <!-- 东西 -->
-            <Title value="登录" />
+            <Title value="注册" />
             <form action="" class="login">
-                <input type="text" placeholder="手机号">
-                <input type="password" placeholder="密码">
-                <!-- Todo 添加删除和眼睛tip -->
-                <div class="box-checkbox">
-                    <label for="remeber"><input id="remeber" type="checkbox"> 记住密码</label>
+                <input class="input" type="text" placeholder="手机号">
+                <div class="box-ver-code clearfix">
+                    <input type="text" class="pull-left" placeholder="输入手机验证码">
+                    <button class="pull-left">发送验证码</button>
+                    <!-- <button class="wait" disabled>60s</button> -->
                 </div>
-                <button type="submit">登录</button>
+                <input class="input" type="password" placeholder="密码">
+                <!-- Todo 添加删除和眼睛tip -->
+                <button type="submit">注册</button>
             </form>
             <Footer />
         </div>
@@ -136,8 +138,8 @@
     .login{
         width: 100%;
     }
-    .login input[type=text],
-    .login input[type=password]
+    .login .input[type=text],
+    .login .input[type=password]
     {
         background-color: #222;
         width: 90%;
@@ -186,5 +188,29 @@
     }
     .login button:hover{
         background-color: #259FFF;
+    }
+    .box-ver-code{
+        width: 90%;
+        max-width: 400px;
+        margin:0 auto;
+        /* background-color: rebeccapurple; */
+    }
+    .box-ver-code input{
+        width: 60%;
+        background-color: #222;
+        height: 44px;
+        border-radius:4px 0 0 4px ;
+        border: 2px solid #222;
+        outline: 0;
+        -webkit-appearance: none;
+        max-width: 400px;
+        margin:0 auto 20px;
+        display: block;
+        padding:0 10px;
+    }
+    .box-ver-code button{
+        width: 40%;
+        margin:0;
+        border-radius: 0 4px  4px 0;
     }
 </style>

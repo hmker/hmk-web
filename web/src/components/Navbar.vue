@@ -30,7 +30,8 @@
                     <div class="user">
                         <!-- Todo -->
                     </div>
-                    <router-link to="/login" class="no-user">登录/注册</router-link>
+                    <router-link to="/register" class="no-user pull-right">注册</router-link>
+                    <router-link to="/login" class="no-user pull-right">登录</router-link>
                     <!-- Todo -->
                 </div>
             </div>

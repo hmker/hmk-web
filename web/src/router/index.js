@@ -5,6 +5,7 @@ import Index from '@/views/Index'
 import Detail from '@/views/Detail'
 import Box from '@/views/Box'
 import Login from '@/views/Login'
+import Register from '@/views/Register'
 import Object from '@/views/Object'
 import Search from '@/views/Search'
 import Publish from '@/views/Publish'
@@ -33,6 +34,11 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
     },
     {
       path: '/object',
