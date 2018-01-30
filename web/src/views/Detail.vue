@@ -14,7 +14,9 @@
                         <div class="nick">e未酱</div>
                     </div>
                     <div class="box-button">
-                        <button>[icon] Like</button>
+                        <!-- Todo Icon -->
+                        <button>喜欢</button>
+                        <button>关注</button>
                     </div>
                 </div>
             </div>
@@ -63,7 +65,14 @@
             </div>
             <div class="box-detail clearfix">
                 <div class="left pull-left">
-                    1
+                    <div class="box-bigimg" :style="{backgroundImage:`url(${bgimg})`}">
+                    </div>
+                    <div class="box-smallimg clearfix">
+                        <div class="smallimg pull-left" :style="{backgroundImage:`url(${bgimg})`}"></div>
+                        <div class="smallimg pull-left" :style="{backgroundImage:`url(${bgimg})`}"></div>
+                        <div class="smallimg pull-left" :style="{backgroundImage:`url(${bgimg})`}"></div>
+                        <div class="smallimg pull-left" :style="{backgroundImage:`url(${bgimg})`}"></div>
+                    </div>
                 </div>
                 <div class="right pull-right">
                     <div class="small-title">简介</div>
@@ -129,14 +138,65 @@
                     </div>
                     <div class="small-title">零件<span>12</span></div>
                     <div class="detail-component">
-                        23333
+                        <div class="component clearfix">
+                            <div class="component-left pull-left clearfix">
+                                <div class="number pull-left">1</div>
+                                <div class="multiplication pull-right">×</div>
+                            </div>
+                            <div class="component-right pull-left">
+                                <div class="name">STM32F405RGT6</div>
+                                <div class="intro">Microprocessors, Microcontrollers, DSPs / Microcontrollers (MCUs)</div>
+                            </div>
+                        </div>
+                        <div class="component clearfix">
+                            <div class="component-left pull-left clearfix">
+                                <div class="number pull-left">1</div>
+                                <div class="multiplication pull-right">×</div>
+                            </div>
+                            <div class="component-right pull-left">
+                                <div class="name">STM32F405RGT6</div>
+                                <div class="intro">Microprocessors, Microcontrollers, DSPs / Microcontrollers (MCUs)</div>
+                            </div>
+                        </div>
+                        <div class="box-buy">
+                            <button class="buy-all-component">
+                                一键购买所有零件
+                            </button>
+                            <div class="info">
+                                * 出现本按钮，说明此东西的零件，可全部在本网站官方店采购
+                            </div>
+                        </div>
                     </div>
-                    <div class="small-title">讨论<span>123</span></div>
-                    <div class="detail-new-chat">
-                        new chat
-                    </div>
+                    <div class="small-title">讨论<span>2</span></div>
                     <div class="detail-chat">
-                        chat list
+                        <div class="box-chat clearfix">
+                            <div class="avatar pull-left" :style="{backgroundImage:`url(${avatarimg})`}"></div>
+                            <div class="chat pull-left">
+                                <div class="info clearfix">
+                                    <div class="name pull-left">eWei</div>
+                                    <div class="time pull-left">1天前</div>
+                                </div>
+                                <div class="text">
+                                    非常不错
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-chat clearfix">
+                            <div class="avatar pull-left" :style="{backgroundImage:`url(${avatarimg})`}"></div>
+                            <div class="chat pull-left">
+                                <div class="info clearfix">
+                                    <div class="name pull-left">eWei</div>
+                                    <div class="time pull-left">1天前</div>
+                                </div>
+                                <div class="text">
+                                    非常不错
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-new-chat">
+                        <textarea class="new-chat" placeholder="输入评论内容"></textarea>
+                        <button class="btn-new-chat">评论</button>
                     </div>
                 </div>
             </div>
@@ -171,6 +231,7 @@
                 data: "",
                 topbg:"http://hmk-temp.oss-cn-hangzhou.aliyuncs.com/img/bgimg.jpg",
                 avatarimg:"http://hmk-temp.oss-cn-hangzhou.aliyuncs.com/img/avatar.jpg",
+                bgimg:"http://hmk-temp.oss-cn-hangzhou.aliyuncs.com/img/bgimg.jpg",
                 showfixQucikbar:false,
                 projectData: [
                     {
@@ -412,6 +473,7 @@
     }
     .box-detail .left{
         width: 40%;
+        padding-right: 60px;
     }
     .box-detail .right{
         width: 60%;
@@ -502,5 +564,126 @@
     }
     .card:nth-child(3n){
        margin-right: 0; 
+    }
+    /* left */
+    .box-bigimg{
+        width: 100%;
+        padding-bottom: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .box-smallimg{
+        margin-top: 4%;
+        width: 100%;
+        position: relative;
+    }
+    .smallimg{
+        width: 22%;
+        padding-bottom: 22%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 4%;
+        cursor: pointer;
+    }
+    .smallimg:last-child{
+        margin-right: 0;
+    }
+    /* 零件 */
+    .detail-component{
+        width: 100%;
+        font-size: 14px;
+    }
+    .detail-component .component{
+        width: 100%;
+        position: relative;
+        margin-bottom: 30px;
+    }
+    .detail-component .component:last-child{
+        margin-bottom: 0;
+    }
+    .detail-component .component-left{
+        width: 100px;
+    }
+    .detail-component .multiplication{
+        color: #888;
+        margin-right: 40px;
+    }
+    .detail-component .intro{
+        color: #888;
+        font-size: 12px;
+        margin-top: 6px;
+    }
+    /* 讨论 */
+    .detail-chat{
+        width: 100%;
+        font-size: 14px;
+    }
+    .detail-chat .box-chat{
+        margin-bottom: 40px;
+    }
+    .detail-chat .avatar{
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .detail-chat .name {
+        color: #007AFF;
+    }
+    .detail-chat .time {
+        color: #333;
+        margin-left: 10px;
+    }
+    .detail-chat .text {
+        margin-top: 20px;
+    }
+    /* 发布评论 */
+    .detail-new-chat{
+        width: 100%;
+        font-size: 14px;
+    }
+    .new-chat{
+        width: 100%;
+        height: 80px;
+        border-radius: 5px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        resize: none;
+        outline: none;
+        box-shadow: none;
+        -webkit-appearance: none;
+        padding:6px 10px;
+    }
+    .btn-new-chat{
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        background-color: #000;
+        color: #007AFF;
+        margin-top: 10px;
+    }
+    .box-buy .buy-all-component{
+        width: 200px;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        background-color: #000;
+        color: #007AFF;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .box-buy .info {
+        font-size: 12px;
+        color: #888;
+        margin-top: 10px;
     }
 </style>
